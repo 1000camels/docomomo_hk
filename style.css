@@ -1,0 +1,11 @@
+/*
+Theme Name:     docomomo_hk
+Theme URI:      http://docomomo.hk
+Description:    docomomo_hk theme (child theme for the Twenty Twelve theme)
+Author:         darcy w. christ
+Author URI:     http://1000camels.com/about
+Template:       twentytwelve
+Version:        0.1.0
+*/
+
+@import url("../twentytwelve/style.css");
