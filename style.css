@@ -28,3 +28,20 @@ Version:        0.1.0
 .site-content {
 	margin-top: 0rem;
 }
+
+.single article {
+	padding: 10px;
+}
+.single .entry-header {
+	width: 540px;
+	float: left;
+}
+
+.single .entry-header {
+	width: 540px;
+	float: left;
+}
+.single .site .attachment-post-thumbnail {
+	width: 400px;
+	float: right;
+}

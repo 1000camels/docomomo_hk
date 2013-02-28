@@ -15,7 +15,6 @@
 		</div>
 		<?php endif; ?>
 		<header class="entry-header">
-			<?php the_post_thumbnail(); ?>
 			<?php if ( is_single() ) : ?>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php else : ?>
@@ -29,6 +28,7 @@
 				</div><!-- .comments-link -->
 			<?php endif; // comments_open() ?>
 		</header><!-- .entry-header -->
+			<?php the_post_thumbnail(); ?>
 
 		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 		<div class="entry-summary">
