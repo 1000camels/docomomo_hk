@@ -22,12 +22,7 @@ get_header(); ?>
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php echo get_post_type(); ?>
-				<?php if(get_post_type() == 'site') { ?>
-					<?php get_template_part( 'content', 'site' ); ?>
-				<?php } else { ?>
-					<?php get_template_part( 'content', get_post_format() ); ?>
-				<?php } ?>
+				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
 
 			<?php twentytwelve_content_nav( 'nav-below' ); ?>

@@ -9,3 +9,22 @@ Version:        0.1.0
 */
 
 @import url("../twentytwelve/style.css");
+
+.site-list .type-site {
+	float: left;
+	width: 150px;
+	margin: 10px;
+	padding: 10px;
+}
+
+.site-list article {
+	border-bottom: none;
+}
+.site-list .entry-header {
+	margin-bottom: 0px;
+}
+
+
+.site-content {
+	margin-top: 0rem;
+}

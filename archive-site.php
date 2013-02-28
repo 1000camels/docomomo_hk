@@ -19,16 +19,17 @@
 
 get_header(); ?>
 
-	<section id="primary" class="site-content">
+	<section id="primary" class="site-content site-list">
 		<div id="content" role="main">
 
 		<?php if ( have_posts() ) : ?>
-			<header class="archive-header">
+			<!-- <header class="archive-header">
 				<h1 class="archive-title">Sites</h1>
-			</header><!-- .archive-header -->
+			</header> -->
 
 			<?php
 			/* Start the Loop */
+			query_posts($query_string . '&orderby=title&order=ASC');
 			while ( have_posts() ) : the_post();
 
 				/* Include the post format-specific template for the content. If you want to
