@@ -10,6 +10,41 @@ Version:        0.1.0
 
 @import url("../twentytwelve/style.css");
 
+.site-header h1 {
+    float: left;
+    width: 50%;
+    line-height: 50px;
+    padding-bottom: 30px;
+    font-family: "futura-pt";
+    letter-spacing: 0.025em;
+    clear: none;
+}
+.site-header h1 img {
+    float: left;
+}
+.site-header h1 .hk-logo {
+    font-size: 62px;
+    padding-left: 4px;
+    float: left;
+    clear: right;
+}
+.site-header h1 .branch-name {
+    display: block;
+    line-height: 10px;
+    float: none;
+    clear: both;
+}
+.site-header h1 a {
+    color: #005e9a;
+}
+
+.site-header h2 {
+    width: 30%;
+    float: left;
+    clear: none;
+    padding: 0 10px 0 100px;
+}
+
 .site-list .type-site {
 	float: left;
 	width: 150px;
@@ -44,4 +79,14 @@ Version:        0.1.0
 .single .site .attachment-post-thumbnail {
 	width: 400px;
 	float: right;
+}
+
+.featured-themes div {
+    float: left;
+    width: 300px;
+    height: 200px;
+    margin: 20px 60px;
+    padding: 20px;
+    border: 1px solid #000;
+    font-size: 24px;
 }
