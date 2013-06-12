@@ -41,18 +41,21 @@
                         <a href="<?php echo WP_SITEURL; ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/docomomo-logo.png" alt="docomomo_ logo"/><span class="hk-logo">hk</span>
                         <span class="branch-name">Hong Kong</span></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+                        <?php do_action('icl_language_selector'); ?>
 		</hgroup>
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
-			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-
-		<?php $header_image = get_header_image();
-		if ( ! empty( $header_image ) ) : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
-		<?php endif; ?>
 	</header><!-- #masthead -->
+        
+        <div>
+            <nav id="site-navigation" class="main-navigation" role="navigation">
+                    <h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
+                    <a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
+                    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+            </nav><!-- #site-navigation -->
 
+            <?php $header_image = get_header_image();
+            if ( ! empty( $header_image ) ) : ?>
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
+            <?php endif; ?>
+        </div>
+        
 	<div id="main" class="wrapper">

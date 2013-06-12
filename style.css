@@ -10,6 +10,26 @@ Version:        0.1.0
 
 @import url("../twentytwelve/style.css");
 
+body {
+    background-color: #fff;
+}
+
+body.home .site {
+    max-width: 100%; /* 68.571428571rem; */
+}
+
+.site-header {
+    width: 100%;
+    background-color: black;
+    padding: 0;
+}
+
+.main-navigation, .wrapper {
+    max-width: 1024px; 
+    max-width: 68.571428571rem;
+    margin: 0 auto;
+}
+
 .site-header h1 {
     float: left;
     width: 50%;
@@ -74,12 +94,13 @@ Version:        0.1.0
 }
 
 .single .entry-header {
-	width: 540px;
+	width: 100%;
 	float: left;
 }
 .single .site .attachment-post-thumbnail {
 	width: 400px;
 	float: right;
+	margin: -3.4em 0 10px 10px;
 }
 
 .featured-themes div {
@@ -90,4 +111,16 @@ Version:        0.1.0
     padding: 20px;
     border: 1px solid #000;
     font-size: 24px;
+}
+
+
+
+
+@media screen and (min-width: 960px) {
+ 
+    body .site {
+        margin-top: 0px;
+        /*margin-top: 3.428571429rem;*/
+    }
+    
 }
