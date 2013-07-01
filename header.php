@@ -29,6 +29,7 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 <?php wp_head(); ?>
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/masonry.pkgd.min.js"></script>
 <script type="text/javascript" src="//use.typekit.net/hep3thp.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
@@ -38,12 +39,16 @@
 	<header id="masthead" class="site-header" role="banner">
 		<hgroup>
                     <h1 class="site-title">
-                        <a href="<?php echo WP_SITEURL; ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/docomomo-logo.png" alt="docomomo_ logo"/><span class="hk-logo">hk</span>
-                        <span class="branch-name">Hong Kong</span></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-                        <?php do_action('icl_language_selector'); ?>
+                        <a href="<?php echo WP_SITEURL; ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/docomomo_hk.png" alt="docomomo_ logo"/></a>
+                    </h1>
+		            <!-- <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2> -->
+                        
+                    <div id="flags_language_selector"><?php language_selector_flags(); ?></div>
+
+                    <div class="search-field">
+                        <div class="header-search"><?php get_search_form(); ?></div>
+                    </div>
 		</hgroup>
-	</header><!-- #masthead -->
         
         <div>
             <nav id="site-navigation" class="main-navigation" role="navigation">
@@ -57,5 +62,6 @@
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
             <?php endif; ?>
         </div>
+	</header><!-- #masthead -->
         
 	<div id="main" class="wrapper">

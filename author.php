@@ -13,7 +13,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="site-content">
+	<section id="primary" class="site-content site-list">
 		<div id="content" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -58,7 +58,13 @@ get_header(); ?>
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
+				<?php
+				if(get_post_type(get_the_ID()) == 'site') {
+					get_template_part( 'content', 'site-thumbnail' ); 
+				} else {
+					get_template_part( 'content', get_post_format() ); 	
+				}
+				?>
 			<?php endwhile; ?>
 
 			<?php twentytwelve_content_nav( 'nav-below' ); ?>

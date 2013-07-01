@@ -13,18 +13,25 @@ Version:        0.1.0
 body {
     background-color: #fff;
 }
+body.custom-font-enabled {
+    font-family: "freight-sans-pro";
+}
 
-body.home .site {
+body .site {
     max-width: 100%; /* 68.571428571rem; */
 }
 
+body .site {
+    padding: 0;
+    box-shadow: none;
+}
 .site-header {
     width: 100%;
+    height: 196px;
     background-color: black;
     padding: 0;
 }
-
-.main-navigation, .wrapper {
+.site-header hgroup {
     max-width: 1024px; 
     max-width: 68.571428571rem;
     margin: 0 auto;
@@ -34,17 +41,18 @@ body.home .site {
     float: left;
     width: 50%;
     line-height: 50px;
-    padding-bottom: 30px;
+    padding: 40px 0px 0px;
     font-family: "futura-pt";
     letter-spacing: 0.025em;
     clear: none;
 }
 .site-header h1 img {
     float: left;
+    max-width: 100%;
 }
-.site-header h1 .hk-logo {
+.site-header h1.site_title {
     font-size: 62px;
-    padding-left: 4px;
+    margin: 30px 4px;
     float: left;
     clear: right;
 }
@@ -66,6 +74,27 @@ body.home .site {
     padding: 0 10px 0 100px;
 }
 
+#flags_language_selector {
+    float: right;
+    margin: 10px 40px 0;
+}
+#flags_language_selector img { 
+      margin:1px;
+      border:1px solid #333;
+}
+
+.search-field {
+    float: right;
+    height: 50px;
+    margin: 80px -80px 0 0;
+}
+
+.main-navigation, .wrapper {
+    max-width: 1024px; 
+    max-width: 68.571428571rem;
+    margin: 0 auto;
+}
+
 .site-list .type-site {
 	float: left;
 	width: 150px;
@@ -82,7 +111,7 @@ body.home .site {
 
 
 .site-content {
-	margin-top: 0rem;
+	margin: 1rem 1rem;
 }
 
 .single article {
@@ -97,7 +126,8 @@ body.home .site {
 	width: 100%;
 	float: left;
 }
-.single .site .attachment-post-thumbnail {
+.single .site .featured-image {
+    max-width: 100%;
 	width: 400px;
 	float: right;
 	margin: -3.4em 0 10px 10px;
@@ -113,14 +143,57 @@ body.home .site {
     font-size: 24px;
 }
 
+.main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul {
+    border: none;
+}
+.main-navigation li {
+    font-size: 16px;
+    font-size: 1.142857143rem; 
+    line-height: 1;
+}
+.main-navigation li a:hover {
+    color: #fff;
+}
 
+.entry-header .entry-title {
+    font-size: 19px;
+    font-size: 1.28571428571429rem; 
+    line-height: 1.2;
+    font-weight: bold;
+}
+.entry-header img.wp-post-image {
+    margin-bottom: 12px;
+    margin-bottom: 0.85714285714286rem;
+}
+
+.site-content article {
+    margin-bottom: 14px;
+    margin-bottom: 1rem; 
+}
+
+footer.entry-meta {
+    font-size: 14px;
+    font-size: 1rem;
+}
 
 
 @media screen and (min-width: 960px) {
- 
+
     body .site {
         margin-top: 0px;
+        margin-bottom: 0px;
         /*margin-top: 3.428571429rem;*/
     }
     
+}
+
+/* Minimum width of 600 pixels. */
+@media screen and (min-width: 800px) {
+
+    /*.main-navigation li {
+        font-size: 12px;
+        font-size: 0.85714285714286rem; 
+        line-height: 1;
+    }*/
+
 }

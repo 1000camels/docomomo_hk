@@ -19,6 +19,23 @@
 
 get_header(); ?>
 
+	<script type="text/javascript">
+	jQuery(document).ready(function(){
+	    var container = document.querySelector('#content');
+	    var msnry = new Masonry( container, {
+	      itemSelector: 'article',
+	      columnWidth: 240,
+	      isInitLayout: false
+	    });
+
+	    msnry.on( 'layoutComplete', function() {
+		  console.log('layout is complete');
+		});
+		// manually trigger initial layout
+		msnry.layout();
+	});
+	</script>
+
 	<section id="primary" class="site-content site-list">
 		<div id="content" role="main">
 
@@ -29,7 +46,7 @@ get_header(); ?>
 
 			<?php
 			/* Start the Loop */
-			query_posts($query_string . '&orderby=title&order=ASC');
+			query_posts($query_string . '&orderby=title&order=ASC&posts_per_page=-1');
 			while ( have_posts() ) : the_post();
 
 				/* Include the post format-specific template for the content. If you want to

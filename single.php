@@ -12,9 +12,21 @@ get_header(); ?>
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 
+			<?php /* Start the Loop */ ?>
+            <?php 
+            	if(get_post_type(get_the_ID()) == 'site') {
+					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            		query_posts($query_string . '&orderby=title&order=ASC&posts_per_page=-1&paged=$paged'); 
+            	}
+            ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'content', get_post_format() ); ?>
+				<?php
+				if(get_post_type(get_the_ID()) == 'site') {
+					get_template_part( 'content', 'site' );
+				} else {
+					get_template_part( 'content', get_post_format() ); 	
+				}
+				?>
 
 				<nav class="nav-single">
 					<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentytwelve' ); ?></h3>
