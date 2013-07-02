@@ -71,13 +71,13 @@ function docomomo_entry_meta() {
         esc_html( get_the_date() )
     );
 
-    $author = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
+    /*$author = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
         esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
         esc_attr( sprintf( __( 'View all posts by %s', 'twentytwelve' ), coauthors_posts_links(null,null,null,null,FALSE) ) ),
         get_the_author()
-    );
+    );*/
 
-    if(function_exists('coauthors')) {
+    /*if(function_exists('coauthors')) {
         $i = new CoAuthorsIterator();
         $i->iterate();
         $author = '';
@@ -95,7 +95,7 @@ function docomomo_entry_meta() {
                            esc_attr( sprintf( __( 'View all posts by %s', 'twentytwelve' ), get_the_author() ) ),
                            get_the_author()
                         );
-     }
+     }*/
 
     foreach( get_coauthors() as $coauthor ) {
          $author = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
