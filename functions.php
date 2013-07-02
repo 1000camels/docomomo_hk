@@ -38,6 +38,21 @@ function adjust_attachment_link($markup, $id, $size, $permalink, $icon, $text) {
     
 }
 
+function language_selector(){
+    $languages = icl_get_languages('skip_missing=0&orderby=code');
+    if(!empty($languages)){
+        echo '<ul>';
+        foreach($languages as $l){
+            echo '<li><a href="'.$l['url'].'">';
+            if(!$l['active']) echo '<b>';
+            echo $l['translated_name'];
+            if(!$l['active']) echo '</b>';
+            echo '</a></li>';
+        }
+        echo '</ul>';
+    }
+}
+
 function language_selector_flags(){
     $languages = icl_get_languages('skip_missing=0&orderby=code');
     if(!empty($languages)){

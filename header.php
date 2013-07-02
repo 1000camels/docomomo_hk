@@ -43,7 +43,7 @@
                     </h1>
 		            <!-- <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2> -->
                         
-                    <div id="flags_language_selector"><?php language_selector_flags(); ?></div>
+                    <div id="language_selector"><?php language_selector(); ?></div>
 
                     <div class="search-field">
                         <div class="header-search"><?php get_search_form(); ?></div>

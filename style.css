@@ -74,6 +74,22 @@ body .site {
     padding: 0 10px 0 100px;
 }
 
+#language_selector {
+    float: right;
+    margin: 10px 40px 0;
+}
+#language_selector li {
+    float: left;
+    padding: 4px;
+    color: #6a6a6a;
+}
+#language_selector li a {
+    margin: 0;
+    padding: 0;
+    color: #6a6a6a;
+    display: inline;
+    text-decoration: none;
+}
 #flags_language_selector {
     float: right;
     margin: 10px 40px 0;
@@ -188,7 +204,7 @@ footer.entry-meta {
 }
 
 /* Minimum width of 600 pixels. */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
 
     /*.main-navigation li {
         font-size: 12px;
